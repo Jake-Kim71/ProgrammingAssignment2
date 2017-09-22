@@ -35,7 +35,7 @@ cacheSolve <- function(x, ...) {
       return(inv_matrix)                     # retrun the inverse matrix
     }
     data <- x$get()                          # if there is no value in the cache, get the input matrix data
-    inv_matrix <- inverse(data, ...)         # get the inverse matrix from inverse function 
+    inv_matrix <- solve(data, ...)           # get the inverse matrix from solve function 
     x$set_invers(inv_matrix)                 # set the inverse matrix
     inv_matrix                               # return the inverse matrixx
 }
